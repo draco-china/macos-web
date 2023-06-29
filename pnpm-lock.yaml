@@ -26,6 +26,9 @@ dependencies:
   '@radix-ui/react-progress':
     specifier: ^1.0.3
     version: 1.0.3(@types/react-dom@18.2.6)(@types/react@18.2.14)(react-dom@18.1.0)(react@18.1.0)
+  '@radix-ui/react-radio-group':
+    specifier: ^1.1.3
+    version: 1.1.3(@types/react-dom@18.2.6)(@types/react@18.2.14)(react-dom@18.1.0)(react@18.1.0)
   '@radix-ui/react-scroll-area':
     specifier: ^1.0.4
     version: 1.0.4(@types/react-dom@18.2.6)(@types/react@18.2.14)(react-dom@18.1.0)(react@18.1.0)
@@ -85,15 +88,18 @@ dependencies:
     version: 1.10.6(react@18.1.0)
 
 devDependencies:
-  '@iconify-json/codicon':
-    specifier: 1.1.26
-    version: 1.1.26
+  '@iconify-json/fa':
+    specifier: 1.1.4
+    version: 1.1.4
+  '@iconify-json/ic':
+    specifier: 1.1.13
+    version: 1.1.13
   '@iconify-json/icon-park-solid':
     specifier: 1.1.9
     version: 1.1.9
-  '@iconify-json/logos':
-    specifier: 1.1.33
-    version: 1.1.33
+  '@iconify-json/line-md':
+    specifier: 1.1.25
+    version: 1.1.25
   '@iconify-json/raphael':
     specifier: 1.1.4
     version: 1.1.4
@@ -2507,8 +2513,14 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: false
 
-  /@iconify-json/codicon@1.1.26:
-    resolution: {integrity: sha512-45eL9SIRByOryjY4VZ49SyaSxolHpYGL6z8vIzqrhECSQpcd8hvUJjyVj2gQ9IUy6QNVJirvgvWxXbp+XV5AMw==}
+  /@iconify-json/fa@1.1.4:
+    resolution: {integrity: sha512-A7FAeKvR8BP8c2oFgryGLTBkH3FwiSwf3t9RpPkxA3eMyoO2sTpRQqj+BuxU+oxUzAP22Ylz7rEKB/U0QODrHA==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/ic@1.1.13:
+    resolution: {integrity: sha512-5i5zal/VRwTrs99iMTnG1Zu97bgX9Mkiu9TzR1U1rHBylUnBW+HkOweoQVEPgQITGG024/lNbZxU+3Aa2xuDww==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
@@ -2519,8 +2531,8 @@ packages:
       '@iconify/types': 2.0.0
     dev: true
 
-  /@iconify-json/logos@1.1.33:
-    resolution: {integrity: sha512-XHnob/dyib1oCaHZV0yRLXUfGQAr46pTuO/Y+jx9ImVBVb5jyZfJ+PLgro5pp8fyQkXWV2vq7pdR0yP5s4gcvg==}
+  /@iconify-json/line-md@1.1.25:
+    resolution: {integrity: sha512-78d8RFQMj4zdGfEgPi74365sQD10aKyV8SoW6tY7vOH5hILIJQyI5xIzaX7QnsFrEm7UYzk+l1KoOaRfoHouxA==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
@@ -3380,6 +3392,36 @@ packages:
       '@babel/runtime': 7.22.5
       '@radix-ui/react-context': 1.0.1(@types/react@18.2.14)(react@18.1.0)
       '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.2.6)(@types/react@18.2.14)(react-dom@18.1.0)(react@18.1.0)
+      '@types/react': 18.2.14
+      '@types/react-dom': 18.2.6
+      react: 18.1.0
+      react-dom: 18.1.0(react@18.1.0)
+    dev: false
+
+  /@radix-ui/react-radio-group@1.1.3(@types/react-dom@18.2.6)(@types/react@18.2.14)(react-dom@18.1.0)(react@18.1.0):
+    resolution: {integrity: sha512-x+yELayyefNeKeTx4fjK6j99Fs6c4qKm3aY38G3swQVTN6xMpsrbigC0uHs2L//g8q4qR7qOcww8430jJmi2ag==}
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.22.5
+      '@radix-ui/primitive': 1.0.1
+      '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.14)(react@18.1.0)
+      '@radix-ui/react-context': 1.0.1(@types/react@18.2.14)(react@18.1.0)
+      '@radix-ui/react-direction': 1.0.1(@types/react@18.2.14)(react@18.1.0)
+      '@radix-ui/react-presence': 1.0.1(@types/react-dom@18.2.6)(@types/react@18.2.14)(react-dom@18.1.0)(react@18.1.0)
+      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.2.6)(@types/react@18.2.14)(react-dom@18.1.0)(react@18.1.0)
+      '@radix-ui/react-roving-focus': 1.0.4(@types/react-dom@18.2.6)(@types/react@18.2.14)(react-dom@18.1.0)(react@18.1.0)
+      '@radix-ui/react-use-controllable-state': 1.0.1(@types/react@18.2.14)(react@18.1.0)
+      '@radix-ui/react-use-previous': 1.0.1(@types/react@18.2.14)(react@18.1.0)
+      '@radix-ui/react-use-size': 1.0.1(@types/react@18.2.14)(react@18.1.0)
       '@types/react': 18.2.14
       '@types/react-dom': 18.2.6
       react: 18.1.0

@@ -1,3 +1,12 @@
+/*
+ * @Module: module.name
+ * @Description: your description
+ * @Author: draco
+ * @Email: draco.coder@gmail.com
+ * @Github: https://github.com/draco-china
+ * @Date: 2023-06-29 13:23:24
+ * @LastEditTime: 2023-06-29 13:23:24
+ */
 import dark from '@/assets/wallpapers/ventura/dark.webp';
 import light from '@/assets/wallpapers/ventura/light.webp';
 import { useEffect } from 'react';
@@ -61,5 +70,5 @@ export const useTheme = () => {
     actions.setBackground(background);
   }, []);
 
-  return { mode: getMode(), theme, background: background[getMode()], actions };
+  return { mode, theme, background: background[getMode()], actions };
 };

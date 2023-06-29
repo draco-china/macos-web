@@ -8,6 +8,7 @@ export * from './ui/input';
 export * from './ui/menubar';
 export * from './ui/popover';
 export * from './ui/progress';
+export * from './ui/radio-group';
 export * from './ui/scroll-area';
 export * from './ui/separator';
 export * from './ui/slider';

@@ -67,11 +67,109 @@
 
     --ring: 215 27.9% 16.9%;
   }
+  /* Light */
+  :root[data-theme='red'] {
+    --primary: 0 84.24% 60.2%;
+  }
+  :root[data-theme='orange'] {
+    --primary: 24.58 94.98% 53.14%;
+  }
+  :root[data-theme='amber'] {
+    --primary: 37.69 92.13% 50.2%;
+  }
+  :root[data-theme='yellow'] {
+    --primary: 45.4 93.39% 47.45%;
+  }
+  :root[data-theme='lime'] {
+    --primary: 83.74 80.53% 44.31%;
+  }
+  :root[data-theme='green'] {
+    --primary: 142.09 70.56% 45.29%;
+  }
+  :root[data-theme='emerald'] {
+    --primary: 160.12 84.08% 39.41%;
+  }
+  :root[data-theme='teal'] {
+    --primary: 173.41 80.39% 40%;
+  }
+  :root[data-theme='cyan'] {
+    --primary: 188.74 94.5% 42.75%;
+  }
   :root[data-theme='sky'] {
     --primary: 198.63 88.66% 48.43%;
   }
+  :root[data-theme='blue'] {
+    --primary: 217.22 91.22% 59.8%;
+  }
+  :root[data-theme='indigo'] {
+    --primary: 238.73 83.53% 66.67%;
+  }
+  :root[data-theme='violet'] {
+    --primary: 258.31 89.53% 66.27%;
+  }
+  :root[data-theme='purple'] {
+    --primary: 270.74 91.01% 65.1%;
+  }
+  :root[data-theme='fuchsia'] {
+    --primary: 292.19 84.08% 60.59%;
+  }
+  :root[data-theme='pink'] {
+    --primary: 330.37 81.19% 60.39%;
+  }
+  :root[data-theme='rose'] {
+    --primary: 349.72 89.16% 60.2%;
+  }
+  /* Dark */
+  :root[data-mode='dark'][data-theme='red'] {
+    --primary: 0 90.6% 70.78%;
+  }
+  :root[data-mode='dark'][data-theme='orange'] {
+    --primary: 27.02 95.98% 60.98%;
+  }
+  :root[data-mode='dark'][data-theme='amber'] {
+    --primary: 43.26 96.41% 56.27%;
+  }
+  :root[data-mode='dark'][data-theme='yellow'] {
+    --primary: 47.95 95.82% 53.14%;
+  }
+  :root[data-mode='dark'][data-theme='lime'] {
+    --primary: 120 100% 50%;
+  }
+  :root[data-mode='dark'][data-theme='green'] {
+    --primary: 120 100% 25.1%;
+  }
+  :root[data-mode='dark'][data-theme='emerald'] {
+    --primary: 158.11 64.37% 51.57%;
+  }
+  :root[data-mode='dark'][data-theme='teal'] {
+    --primary: 180 100% 25.1%;
+  }
+  :root[data-mode='dark'][data-theme='cyan'] {
+    --primary: 180 100% 50%;
+  }
   :root[data-mode='dark'][data-theme='sky'] {
     --primary: 198.44 93.2% 59.61%;
+  }
+  :root[data-mode='dark'][data-theme='blue'] {
+    --primary: 240 100% 50%;
+  }
+  :root[data-mode='dark'][data-theme='indigo'] {
+    --primary: 274.62 100% 25.49%;
+  }
+  :root[data-mode='dark'][data-theme='violet'] {
+    --primary: 300 76.06% 72.16%;
+  }
+  :root[data-mode='dark'][data-theme='purple'] {
+    --primary: 300 100% 25.1%;
+  }
+  :root[data-mode='dark'][data-theme='fuchsia'] {
+    --primary: 300 100% 50%;
+  }
+  :root[data-mode='dark'][data-theme='pink'] {
+    --primary: 349.52 100% 87.65%;
+  }
+  :root[data-mode='dark'][data-theme='rose'] {
+    --primary: 351.3 94.52% 71.37%;
   }
 }
 
@@ -89,4 +187,56 @@
     font-feature-settings: 'rlig' 1, 'calt' 1;
     @apply bg-cover bg-[center_center] bg-no-repeat will-change-[background-image];
   }
+}
+
+.bg-red {
+  @apply bg-gradient-to-r from-red-400 to-red-500;
+}
+.bg-orange {
+  @apply bg-gradient-to-r from-orange-400 to-orange-500;
+}
+.bg-amber {
+  @apply bg-gradient-to-r from-amber-400 to-amber-500;
+}
+.bg-yellow {
+  @apply bg-gradient-to-r from-yellow-400 to-yellow-500;
+}
+.bg-lime {
+  @apply bg-gradient-to-r from-lime-400 to-lime-500;
+}
+.bg-green {
+  @apply bg-gradient-to-r from-green-400 to-green-500;
+}
+.bg-emerald {
+  @apply bg-gradient-to-r from-emerald-400 to-emerald-500;
+}
+.bg-teal {
+  @apply bg-gradient-to-r from-teal-400 to-teal-500;
+}
+.bg-cyan {
+  @apply bg-gradient-to-r from-cyan-400 to-cyan-500;
+}
+.bg-sky {
+  @apply bg-gradient-to-r from-sky-400 to-sky-500;
+}
+.bg-blue {
+  @apply bg-gradient-to-r from-blue-400 to-blue-500;
+}
+.bg-indigo {
+  @apply bg-gradient-to-r from-indigo-400 to-indigo-500;
+}
+.bg-violet {
+  @apply bg-gradient-to-r from-violet-400 to-violet-500;
+}
+.bg-purple {
+  @apply bg-gradient-to-r from-purple-400 to-purple-500;
+}
+.bg-fuchsia {
+  @apply bg-gradient-to-r from-fuchsia-400 to-fuchsia-500;
+}
+.bg-pink {
+  @apply bg-gradient-to-r from-pink-400 to-pink-500;
+}
+.bg-rose {
+  @apply bg-gradient-to-r from-rose-400 to-rose-500;
 }

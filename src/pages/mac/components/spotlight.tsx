@@ -6,6 +6,7 @@ import {
   CommandItem,
   CommandShortcut,
   ScrollArea,
+  Separator,
 } from '@/components';
 import useAutoComplete, { Engines } from '@/hooks/useAutoComplete';
 import { Search } from 'lucide-react';
@@ -87,7 +88,7 @@ export default function Spotlight() {
                     setEngine(item);
                   }}
                 >
-                  <Icon icon={item.icon as any} className="mr-4" />
+                  <Icon icon={item.icon as any} className="mr-4 text-lg" />
                   {item.title}
                 </div>
               </CommandItem>
@@ -111,8 +112,14 @@ export default function Spotlight() {
           </CommandGroup>
         </div>
         <CommandItem disabled>
-          Actions
-          <CommandShortcut> ⌘K</CommandShortcut>
+          Command
+          <CommandShortcut className="flex h-4 items-center space-x-2">
+            <span className="flex items-center">
+              ⌃<Icon icon="windows" className="mx-1 text-sm" />K
+            </span>
+            <Separator orientation="vertical" className="bg-opacity-20" />
+            <span>⌘ K</span>
+          </CommandShortcut>
         </CommandItem>
       </Command>
     </>

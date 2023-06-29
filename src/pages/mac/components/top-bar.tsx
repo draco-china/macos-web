@@ -1,6 +1,7 @@
 import { Button } from '@/components';
 import { useEffect, useState } from 'react';
 import { Icon } from 'umi';
+import ActionCenter from './action-center';
 import Spotlight from './spotlight';
 
 function getClock() {
@@ -39,6 +40,7 @@ function TopBar() {
       </Button>
       <span className="flex-auto" />
       <Spotlight />
+      <ActionCenter />
       <Button variant="ghost" className="h-full rounded-md">
         {clock}
       </Button>
