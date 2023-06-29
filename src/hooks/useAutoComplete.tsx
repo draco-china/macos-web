@@ -1,5 +1,6 @@
 import fetchJsonp from 'fetch-jsonp';
 import { useQuery } from 'umi';
+
 export default function useAutoComplete({
   engine,
   query,
@@ -78,36 +79,36 @@ export const Engines = [
     key: 'Bing',
     url: 'https://www.bing.com/search?q=',
     title: '必应',
-    icon: 'https://www.bing.com/favicon.ico',
+    icon: 'local:bing',
   },
   {
     key: 'Google',
     url: 'https://www.google.com/search?q=',
     title: '谷歌',
-    icon: 'https://www.google.com/favicon.ico',
+    icon: 'local:google',
   },
   {
     key: 'Baidu',
     url: 'https://www.baidu.com/s?wd=',
     title: '百度',
-    icon: 'https://www.baidu.com/favicon.ico',
+    icon: 'local:baidu',
   },
   {
     key: 'Yahoo',
     url: 'https://search.yahoo.com/search?p=',
     title: '雅虎',
-    icon: 'https://search.yahoo.com/favicon.ico',
+    icon: 'local:yahoo',
   },
   {
     key: 'Wikipedia',
     url: 'https://zh.wikipedia.org/wiki/Special:Search/',
     title: '维基百科',
-    icon: 'https://zh.wikipedia.org/static/favicon/wikipedia.ico',
+    icon: 'local:wikipedia',
   },
   {
     key: 'Qwant',
     url: 'https://www.qwant.com/?q=',
     title: 'Qwant',
-    icon: 'https://www.qwant.com/favicon.ico',
+    icon: 'local:qwant',
   },
 ];

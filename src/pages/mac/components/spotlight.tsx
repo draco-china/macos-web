@@ -1,7 +1,4 @@
 import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
   Button,
   Command,
   CommandGroup,
@@ -13,6 +10,7 @@ import {
 import useAutoComplete, { Engines } from '@/hooks/useAutoComplete';
 import { Search } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { Icon } from 'umi';
 
 export default function Spotlight() {
   const [open, setOpen] = useState<boolean>(false);
@@ -84,15 +82,12 @@ export default function Spotlight() {
                 disabled
               >
                 <div
-                  className="absolute flex h-full w-full items-center"
+                  className="flex h-full w-full items-center"
                   onClick={() => {
                     setEngine(item);
                   }}
                 >
-                  <Avatar className="mr-4 h-6 w-6 bg-foreground p-1">
-                    <AvatarImage src={item.icon} alt={item.key} />
-                    <AvatarFallback>{item.title}</AvatarFallback>
-                  </Avatar>
+                  <Icon icon={item.icon as any} className="mr-4" />
                   {item.title}
                 </div>
               </CommandItem>
