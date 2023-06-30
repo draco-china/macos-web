@@ -1,0 +1,26 @@
+{
+  "icons": {
+    "16": "favicon/icon16.png",
+    "32": "favicon/icon32.png",
+    "48": "favicon/icon48.png",
+    "64": "favicon/icon64.png",
+    "128": "favicon/icon128.png"
+  },
+  "manifest_version": 3,
+  "action": {
+    "default_icon": {
+      "16": "favicon/icon16.png",
+      "32": "favicon/icon32.png",
+      "48": "favicon/icon48.png",
+      "64": "favicon/icon64.png",
+      "128": "favicon/icon128.png"
+    }
+  },
+  "version": "0.0.1",
+  "author": "draco",
+  "name": "Chromac tabs",
+  "description": "Chromac Tabs 是一个完美的 Chrome 插件，适合那些喜欢 Mac 风格并想要使其浏览器标签页更加现代和个性化的用户。它易于安装和使用，并且可以根据您的偏好进行自定义设置。无论您是在工作还是娱乐，Chromac Tabs 都是一个非常有用的工具，可以提高您的浏览效率并使您的浏览器标签页更加美观。",
+  "background": { "service_worker": "background.js" },
+  "chrome_url_overrides": { "newtab": "index.html" },
+  "host_permissions": ["https://*/*"]
+}
