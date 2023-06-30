@@ -71,16 +71,16 @@ const actions = {
     return store.apps.find((app) => app.id === id);
   },
   add: (app: App) => {
-    if (store.apps.find((app) => app.id === app.id)) return;
+    if (store.apps.find((item) => item.id === app.id)) return;
     store.apps.push(app);
   },
   remove: (id: string) => {
     const index = store.apps.findIndex((app) => app.id === id);
-    index !== -1 && store.apps.splice(index, 1);
+    if (index !== -1) store.apps.splice(index, 1);
   },
   update: (id: string, partialApp: Partial<App>) => {
     const app = store.apps.find((app) => app.id === id);
-    app && Object.assign(app, partialApp);
+    if (app) Object.assign(app, partialApp);
   },
 };
 

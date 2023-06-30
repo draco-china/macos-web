@@ -35,12 +35,7 @@ export default function Dock({ size }: DockProps) {
           pull: false,
         }}
         list={['launchpad'].map((id: string) => ({ id }))}
-        setList={(
-          newState: {
-            id: string;
-            chosen?: boolean;
-          }[],
-        ) => {}}
+        setList={() => {}}
         ghostClass="invisible"
         animation={150}
         delay={2}
@@ -97,12 +92,7 @@ export default function Dock({ size }: DockProps) {
           pull: false,
         }}
         list={['github'].map((id: string) => ({ id }))}
-        setList={(
-          newState: {
-            id: string;
-            chosen?: boolean;
-          }[],
-        ) => {}}
+        setList={() => {}}
         ghostClass="invisible"
         animation={150}
         delay={2}

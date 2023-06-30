@@ -1,18 +1,9 @@
-/*
- * @Module: module.name
- * @Description: your description
- * @Author: draco
- * @Email: draco.coder@gmail.com
- * @Github: https://github.com/draco-china
- * @Date: 2023-06-26 15:13:33
- * @LastEditTime: 2023-06-27 12:45:09
- */
 import useDeviceType from '@/hooks/useDeviceType';
 import { Suspense, lazy } from 'react';
 
 const createComponent = (path: string) => {
   return lazy(() => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       import(`${path}`).then((module) => resolve(module));
     });
   });

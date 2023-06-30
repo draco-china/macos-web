@@ -12,7 +12,7 @@ function getClock() {
     day: '2-digit',
   })
     .format(date)
-    .replace(/\,/g, '');
+    .replace(/,/g, '');
 
   const formattedTime = new Intl.DateTimeFormat('en-US', {
     hour: 'numeric',

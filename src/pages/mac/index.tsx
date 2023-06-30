@@ -4,7 +4,7 @@ import Dock from './components/dock';
 import TopBar from './components/top-bar';
 
 export default function Mac() {
-  const { background } = useTheme();
+  const {} = useTheme();
   const { size } = useDock();
   return (
     <Fragment>
