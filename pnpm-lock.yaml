@@ -154,9 +154,6 @@ devDependencies:
   '@iconify-json/raphael':
     specifier: 1.1.4
     version: 1.1.4
-  '@types/jsonp':
-    specifier: ^0.2.1
-    version: 0.2.1
   '@types/react':
     specifier: ^18.2.14
     version: 18.2.14
@@ -4588,10 +4585,6 @@ packages:
 
   /@types/json-schema@7.0.12:
     resolution: {integrity: sha512-Hr5Jfhc9eYOQNPYO5WLDq/n4jqijdHNlDXjuAQkkt+mWdQR+XJToOHrsD4cPaMXpn6KO7y2+wM8AZEs8VpBLVA==}
-
-  /@types/jsonp@0.2.1:
-    resolution: {integrity: sha512-5OZzjBntljpajg4RmydvZEyYCjiVVq6AZOm/TVIxSb7FiySOur3B/YcUEtdoy01FEzwiiUP7qLtUE6qiOF/kfQ==}
-    dev: true
 
   /@types/minimist@1.2.2:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}

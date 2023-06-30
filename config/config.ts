@@ -2,6 +2,8 @@ import { defineConfig } from 'umi';
 import icons from './icons';
 
 export default defineConfig({
+  title: 'macos',
+  favicons: ['/favicon/icon.png'],
   mountElementId: 'app',
   routes: [{ path: '/', component: 'index' }],
   npmClient: 'pnpm',
@@ -17,11 +19,37 @@ export default defineConfig({
   fastRefresh: true,
   hash: true,
   codeSplitting: { jsStrategy: 'granularChunks' },
+  esbuildMinifyIIFE: true,
   mfsu: {
     shared: {
       react: {
         singleton: true,
       },
     },
+  },
+  verifyCommit: {
+    scope: [
+      'feat',
+      'fix',
+      'docs',
+      'style',
+      'refactor',
+      'perf',
+      'test',
+      'workflow',
+      'build',
+      'ci',
+      'chore',
+      'types',
+      'wip',
+      'release',
+      'dep',
+      'deps',
+      'example',
+      'examples',
+      'merge',
+      'revert',
+    ],
+    allowEmoji: true,
   },
 });
