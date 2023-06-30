@@ -52,7 +52,7 @@ export default function Spotlight() {
         <Search className="h-4 w-4" />
       </Button>
       <Command
-        className={`fixed left-0 right-0 top-1/4  mx-auto h-max w-2/5 origin-center rounded-lg border border-opacity-20 bg-opacity-60 shadow-md transition-all duration-200 delay-75 ${
+        className={`fixed bottom-0 left-0 right-0 top-0 m-auto h-max w-2/5 origin-center rounded-lg border border-opacity-20 bg-opacity-60 shadow-md transition-all duration-200 delay-75 ${
           open
             ? 'visible z-10 scale-100 opacity-100'
             : 'invisible z-0 scale-0 opacity-0'
