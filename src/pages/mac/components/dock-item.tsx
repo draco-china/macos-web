@@ -20,14 +20,16 @@ export default function DockItem({ id, mouseX, size }: ItemProps) {
   if (!app) return null;
   return (
     <li
-      className="flex flex-col items-center justify-center"
+      className="group flex flex-col items-center justify-center"
       onClick={actions.open}
     >
       <motion.span
-        data-label={app.name}
-        className="relative hover:before:absolute hover:before:bottom-full hover:before:left-1/2 hover:before:mb-2 hover:before:w-max hover:before:-translate-x-1/2 hover:before:rounded-md hover:before:border hover:before:border-border/20 hover:before:bg-background/80 hover:before:px-4 hover:before:py-2 hover:before:content-[attr(data-label)]"
+        className="relative"
         whileTap={{ translateY: !open && !app.dock ? '-72%' : 0 }}
       >
+        <span className="invisible absolute bottom-full left-1/2 mb-2 w-max -translate-x-1/2 rounded-md border border-border/20 bg-background/80 px-4 py-2 group-hover:visible">
+          {app.name}
+        </span>
         <motion.img
           ref={ref as any}
           className="cursor-pointer rounded-2xl bg-foreground"
