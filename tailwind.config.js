@@ -4,8 +4,8 @@
  * @Author: draco
  * @Email: draco.coder@gmail.com
  * @Github: https://github.com/draco-china
- * @Date: 2023-06-28 14:29:11
- * @LastEditTime: 2023-06-28 14:38:43
+ * @Date: 2023-07-02 17:57:34
+ * @LastEditTime: 2023-07-02 17:57:34
  */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -15,30 +15,6 @@ module.exports = {
     container: {
       center: true,
       padding: '2rem',
-    },
-    fontFamily: {
-      sans: [
-        '-apple-system',
-        'Apple Color Emoji',
-        'BlinkMacSystemFont',
-        'Arial',
-        'Cantarell',
-        'Helvetica',
-        'Helvetica Neue',
-        'Inter',
-        'Noto Color Emoji',
-        'Noto Sans',
-        'Open Sans',
-        'Oxygen',
-        'Roboto',
-        'Segoe UI',
-        'Segoe UI Emoji',
-        'Segoe UI Symbol',
-        'Ubuntu',
-        'ui-sans-serif',
-        'system-ui',
-        'sans-serif',
-      ],
     },
     extend: {
       colors: {
