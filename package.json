@@ -9,7 +9,8 @@
     "lint": "umi lint --fix",
     "prepare": "husky install",
     "setup": "umi setup",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "zip": "node ./scripts/compress2zip.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.1.1",
@@ -50,6 +51,7 @@
     "lucide-react": "^0.252.0",
     "react-day-picker": "^8.8.0",
     "react-hook-form": "^7.45.1",
+    "react-rnd": "^10.4.1",
     "react-sortablejs": "^6.1.4",
     "tailwind-merge": "^1.13.2",
     "tailwindcss-animate": "^1.0.6",
@@ -58,11 +60,8 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@iconify-json/fa": "1.1.4",
-    "@iconify-json/ic": "1.1.13",
-    "@iconify-json/icon-park-solid": "1.1.9",
-    "@iconify-json/line-md": "1.1.25",
-    "@iconify-json/raphael": "1.1.4",
+    "@iconify-json/mdi": "1.1.52",
+    "@iconify-json/simple-icons": "1.1.58",
     "@types/chrome": "^0.0.239",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",

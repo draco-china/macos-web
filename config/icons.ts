@@ -1,36 +1,42 @@
-/*
- * @Module: module.name
- * @Description: your description
- * @Author: draco
- * @Email: draco.coder@gmail.com
- * @Github: https://github.com/draco-china
- * @Date: 2023-06-29 15:31:30
- * @LastEditTime: 2023-06-29 15:31:30
- */
 export default {
   autoInstall: {},
   alias: {
-    apple: 'raphael:apple',
-    loading: 'icon-park-solid:loading-three',
-    windows: 'fa:windows',
-    'action-center': 'local:action-center',
+    full: 'local:full',
+    'exit-full': 'local:exit-full',
+    loading: 'local:loading-three',
+    switch: 'local:action-center',
+    apple: 'simple-icons:apple',
+    bing: 'simple-icons:microsoftbing',
+    google: 'simple-icons:google',
+    baidu: 'simple-icons:baidu',
+    yahoo: 'simple-icons:yahoo',
+    wikipedia: 'simple-icons:wikipedia',
+    qwant: 'simple-icons:quora',
+    windows: 'mdi:microsoft-windows',
     system: 'local:system',
-    light: 'line-md:moon-alt-to-sunny-outline-loop-transition',
-    dark: 'line-md:moon-alt-loop',
-    check: 'ic:baseline-check',
+    light: 'mdi:white-balance-sunny',
+    dark: 'mdi:weather-night',
+    check: 'mdi:check',
+    close: 'mdi:window-close',
+    minus: 'mdi:window-minimize',
   },
   include: [
-    'local:bing',
-    'local:google',
-    'local:baidu',
-    'local:yahoo',
-    'local:wikipedia',
-    'local:qwant',
-    'fa:windows',
-    'local:action-center',
+    'simple-icons:apple',
+    'simple-icons:microsoftbing',
+    'simple-icons:google',
+    'simple-icons:baidu',
+    'simple-icons:yahoo',
+    'simple-icons:wikipedia',
+    'simple-icons:quora',
+    'mdi:microsoft-windows',
+    'mdi:white-balance-sunny',
+    'mdi:weather-night',
+    'mdi:check',
+    'mdi:window-close',
+    'mdi:window-minimize',
     'local:system',
-    'line-md:moon-alt-to-sunny-outline-loop-transition',
-    'line-md:moon-alt-loop',
-    'ic:baseline-check',
+    'local:action-center',
+    'local:full',
+    'local:exit-full',
   ],
 };
