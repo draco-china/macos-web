@@ -79,7 +79,7 @@ export default function ActionCenter() {
     <Popover>
       <PopoverTrigger asChild>
         <Button variant="ghost" className="h-full">
-          <Icon icon="action-center" />
+          <Icon icon="switch" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-max bg-opacity-40 ">

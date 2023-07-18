@@ -31,7 +31,7 @@ export const useWindow = (id: string) => {
       }
     },
     close: () => {
-      const index = opens.indexOf(id);
+      const index = store.opens.indexOf(id);
       if (index > -1) {
         store.opens.splice(index, 1);
         actions.unmaximize();

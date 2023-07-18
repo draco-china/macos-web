@@ -6,7 +6,7 @@ export interface IStore {
 }
 
 export const store = proxy<IStore>({
-  apps: ['poe', 'vscode', 'gmail', 'microsoft-365'],
+  apps: ['poe', 'gmail', 'microsoft-365', 'app-store', 'settings'],
   size: 5.6,
 });
 

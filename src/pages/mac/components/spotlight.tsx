@@ -9,6 +9,7 @@ import {
   Separator,
 } from '@/components';
 import useAutoComplete, { Engines } from '@/hooks/useAutoComplete';
+import { useWindows } from '@/store';
 import { Search } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Icon } from 'umi';
@@ -41,6 +42,13 @@ export default function Spotlight() {
     document.addEventListener('keydown', down);
     return () => document.removeEventListener('keydown', down);
   }, []);
+
+  const { opens, minimizeds } = useWindows();
+
+  useEffect(() => {
+    const disabled = opens.filter((id) => !minimizeds.includes(id)).length > 0;
+    setOpen(!disabled);
+  }, [opens, minimizeds]);
 
   return (
     <>

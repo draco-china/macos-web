@@ -1,5 +1,5 @@
 import { Separator } from '@/components';
-import { useDock } from '@/store';
+import { useDock, useWindow } from '@/store';
 import { useMotionValue } from 'framer-motion';
 import { ReactSortable } from 'react-sortablejs';
 import DockItem from './dock-item';
@@ -10,6 +10,7 @@ interface DockProps {
 
 export default function Dock({ size }: DockProps) {
   const { apps, actions } = useDock();
+  const { open } = useWindow('launchpad');
   const mouseX = useMotionValue<number | null>(null);
 
   const handleMouseMove = (event: React.MouseEvent<any, MouseEvent>) => {
@@ -21,7 +22,9 @@ export default function Dock({ size }: DockProps) {
 
   return (
     <footer
-      className="fixed bottom-0 left-1/2 mb-2 flex -translate-x-1/2 justify-center space-x-2 rounded-3xl bg-background/60 px-3 py-1 shadow-md"
+      className={`fixed bottom-0 left-1/2  mb-2 flex -translate-x-1/2 justify-center space-x-2 rounded-3xl bg-background/60 px-3 py-1 shadow-md ${
+        open ? 'z-20' : ``
+      }`}
       style={{
         height: `${size}rem`,
       }}
@@ -99,7 +102,7 @@ export default function Dock({ size }: DockProps) {
         tag="ul"
         className="flex h-full w-max items-end justify-start space-x-2"
       >
-        {['github'].map((app) => (
+        {['vscode', 'github'].map((app) => (
           <DockItem key={app} id={app} mouseX={mouseX} size={size} />
         ))}
       </ReactSortable>

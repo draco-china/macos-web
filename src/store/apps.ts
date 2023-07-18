@@ -5,6 +5,7 @@ export interface App {
   id: string;
   name: string;
   icon: string;
+  iframe?: string;
   url?: string;
   children?: ReactNode;
   dock?: boolean;
@@ -23,33 +24,36 @@ export const store = proxy<IStore>({
       dock: true,
     },
     {
+      id: 'github',
+      name: 'GitHub',
+      icon: 'https://img.icons8.com/?size=512&id=52539&format=png&color=1A6DFF,C822FF',
+      url: 'https://github.com/draco-china/macos-web',
+      dock: true,
+    },
+    {
+      id: 'vscode',
+      name: 'VS Code',
+      icon: 'https://img.icons8.com/?size=512&id=i19Ns28h30P4&format=png&color=1A6DFF,C822FF',
+      iframe: 'https://github1s.com/draco-china/macos-web',
+      dock: true,
+    },
+    {
       id: 'app-store',
       name: 'App Store',
       icon: 'https://img.icons8.com/?size=512&id=V7EeO9rdpHrj&format=png&color=1A6DFF,C822FF',
+      children: true,
     },
     {
       id: 'settings',
       name: 'Settings',
       icon: 'https://img.icons8.com/?size=512&id=zxUWtopU6XdM&format=png&color=1A6DFF,C822FF',
-    },
-    {
-      id: 'github',
-      name: 'GitHub',
-      icon: 'https://img.icons8.com/?size=512&id=52539&format=png&color=1A6DFF,C822FF',
-      url: 'https://github.com/draco-china',
-      dock: true,
+      children: true,
     },
     {
       id: 'poe',
       name: 'Poe',
       icon: 'https://img.icons8.com/?size=512&id=kTuxVYRKeKEY&format=png&color=1A6DFF,C822FF',
       url: 'https://www.poe.com',
-    },
-    {
-      id: 'vscode',
-      name: 'VS Code',
-      icon: 'https://img.icons8.com/?size=512&id=i19Ns28h30P4&format=png&color=1A6DFF,C822FF',
-      url: 'https://vscode.dev',
     },
     {
       id: 'gmail',
@@ -93,7 +97,7 @@ export const useApps = () => {
 };
 
 export const useApp = (id: string) => {
-  const app = useSnapshot(store.apps).find((app) => app.id === id);
+  const app = useSnapshot(store.apps).find((app) => app.id === id) as App;
 
   return {
     app,

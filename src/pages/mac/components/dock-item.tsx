@@ -21,7 +21,13 @@ export default function DockItem({ id, mouseX, size }: ItemProps) {
   return (
     <li
       className="group flex flex-col items-center justify-center"
-      onClick={actions.open}
+      onClick={() => {
+        if (app.url) {
+          window.open(app.url, '_blank');
+        } else {
+          actions.open();
+        }
+      }}
     >
       <motion.span
         className="relative"
