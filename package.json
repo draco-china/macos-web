@@ -1,4 +1,5 @@
 {
+  "version": "0.0.0",
   "private": true,
   "author": "Draco <draco.coder@gmail.com>",
   "scripts": {
@@ -8,6 +9,7 @@
     "postinstall": "umi setup",
     "lint": "umi lint --fix",
     "prepare": "husky install",
+    "release": "release-it",
     "setup": "umi setup",
     "start": "npm run dev",
     "zip": "node ./scripts/compress2zip.js"
@@ -62,11 +64,14 @@
   "devDependencies": {
     "@iconify-json/mdi": "1.1.52",
     "@iconify-json/simple-icons": "1.1.58",
+    "@release-it/bumper": "^5.0.0",
+    "@release-it/conventional-changelog": "^7.0.0",
     "@types/chrome": "^0.0.239",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
     "@umijs/lint": "^4.0.72",
     "@umijs/plugins": "^4.0.71",
+    "archiver": "^5.3.1",
     "babel-plugin-dynamic-import-node": "^2.3.3",
     "cross-env": "^7.0.3",
     "husky": "^8.0.3",
@@ -75,6 +80,7 @@
     "prettier-plugin-organize-imports": "^3.2.2",
     "prettier-plugin-packagejson": "^2.4.3",
     "prettier-plugin-tailwindcss": "^0.3.0",
+    "release-it": "^16.1.2",
     "tailwindcss": "^3.3.2",
     "typescript": "^5.1.3"
   }

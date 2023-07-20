@@ -1,0 +1,76 @@
+name: Release and Deploy
+
+on:
+  repository_dispatch:
+
+  workflow_dispatch:
+
+  pull_request:
+    types: [closed]
+
+env:
+  GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ env.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: git config
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+
+      - name: Cache pnpm modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: latest
+          run_install: true
+
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3.4.1
+        with:
+          node-version: 16.x
+          cache: 'pnpm'
+
+      - name: Release to GitHub
+        run: pnpm release --ci
+
+      - name: Build the Web Site
+        run: pnpm build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ env.GITHUB_TOKEN }}
+          publish_dir: ./dist
+
+      # - name: Browser Platform Publish
+      #   uses: PlasmoHQ/bpp@v3
+      #   with:
+      #     keys: ${{ secrets.SUBMIT_KEYS }}
+      #     artifact: ./chromac-tabs.zip
+
+      - name: Delete workflow runs
+        uses: GitRML/delete-workflow-runs@main
+        with:
+          retain_days: 1
+          keep_minimum_runs: 1
+          token: ${{ env.GITHUB_TOKEN }}
+
+      - name: Remove old Releases
+        uses: dev-drprasad/delete-older-releases@v0.1.0
+        with:
+          keep_latest: 1
+          delete_tags: true

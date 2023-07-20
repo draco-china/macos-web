@@ -4,8 +4,8 @@ const archiver = require('archiver');
 const path = require('path');
 
 const root = path.resolve(__dirname, '..');
-const fileDirectory = path.resolve(root, 'build', 'chrome-mv3-prod');
-const zipFile = path.resolve(root, 'build', 'chrome-mv3-prod.zip');
+const fileDirectory = path.resolve(root, 'dist');
+const zipFile = path.resolve(root, 'chromac-tabs.zip');
 
 // create a file to stream archive data to.
 const output = fs.createWriteStream(zipFile);

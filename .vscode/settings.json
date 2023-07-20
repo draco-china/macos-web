@@ -34,7 +34,7 @@
     "*.jsx": "${capture}.js",
     "*.tsx": "${capture}.ts",
     "tsconfig.json": "tsconfig.*.json",
-    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, .yarnrc.yml",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, .yarnrc.yml, .release-it.js",
     ".eslintrc.js": ".eslintrc.js, .eslintignore, .eslintcache",
     ".stylelintrc.js": ".stylelintrc.js, .stylelintignore",
     ".prettierrc": ".prettierrc.js, .prettierignore, .editorconfig",
