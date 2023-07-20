@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[881],{74881:function(a,u,n){n.r(u),n.d(u,{default:function(){return t}});var s=n(62086);function t(){return(0,s.jsx)("main",{className:"",children:"ipad"})}}}]);
